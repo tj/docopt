@@ -542,7 +542,7 @@ func extras(help bool, version string, options patternList, doc string) string {
 	if help {
 		for _, o := range options {
 			if (o.name == "-h" || o.name == "--help") && o.value == true {
-				return strings.Trim(doc, "\n")
+				return "\n" + strings.Trim(doc, "\n") + "\n"
 			}
 		}
 	}
